@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,16 +29,16 @@ const Navbar = () => {
         : "bg-transparent py-5"
     )}>
       <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="#" className="text-xl font-heading font-bold gradient-text">DataVizfolio</a>
+        <Link to="/" className="text-xl font-heading font-bold gradient-text">DataVizfolio</Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#projects" className="text-foreground/80 hover:text-foreground font-medium transition-colors">
             Projects
           </a>
-          <a href="#about" className="text-foreground/80 hover:text-foreground font-medium transition-colors">
+          <Link to="/about" className="text-foreground/80 hover:text-foreground font-medium transition-colors">
             About
-          </a>
+          </Link>
           <a href="#skills" className="text-foreground/80 hover:text-foreground font-medium transition-colors">
             Skills
           </a>
@@ -65,13 +65,13 @@ const Navbar = () => {
             >
               Projects
             </a>
-            <a 
-              href="#about" 
+            <Link 
+              to="/about" 
               className="text-foreground/80 hover:text-foreground font-medium transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
-            </a>
+            </Link>
             <a 
               href="#skills" 
               className="text-foreground/80 hover:text-foreground font-medium transition-colors py-2"
