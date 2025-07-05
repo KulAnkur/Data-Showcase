@@ -180,6 +180,20 @@ npm run build
 npm run preview
 ```
 
+### GitHub Pages Deployment
+
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the project and publishes the `dist/` folder to the `gh-pages` branch whenever changes are pushed to `main`. The site will be available at `https://<USERNAME>.github.io/Data-Showcase/`.
+
+To deploy manually, ensure dependencies are installed and run:
+
+```sh
+npm install
+npm run deploy
+```
+
+Make sure the `base` option in `vite.config.ts` matches your repository name if you fork the project.
+
+
 ## Technologies Used
 
 - React
