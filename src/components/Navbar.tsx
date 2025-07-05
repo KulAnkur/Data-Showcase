@@ -33,13 +33,13 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#projects" className="text-foreground/80 hover:text-foreground font-medium transition-colors">
+          <a href="#" onClick={e => e.preventDefault()} className="text-foreground/80 hover:text-foreground font-medium transition-colors">
             Projects
           </a>
-          <Link to="/about" className="text-foreground/80 hover:text-foreground font-medium transition-colors">
+          <a href="#" onClick={e => e.preventDefault()} className="text-foreground/80 hover:text-foreground font-medium transition-colors">
             About
-          </Link>
-          <a href="#skills" className="text-foreground/80 hover:text-foreground font-medium transition-colors">
+          </a>
+          <a href="#" onClick={e => e.preventDefault()} className="text-foreground/80 hover:text-foreground font-medium transition-colors">
             Skills
           </a>
         </nav>
@@ -59,23 +59,23 @@ const Navbar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg">
           <nav className="container mx-auto py-4 flex flex-col space-y-4 px-4">
             <a 
-              href="#projects" 
+              href="#" 
               className="text-foreground/80 hover:text-foreground font-medium transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={e => { e.preventDefault(); setMobileMenuOpen(false); }}
             >
               Projects
             </a>
-            <Link 
-              to="/about" 
+            <a 
+              href="#" 
               className="text-foreground/80 hover:text-foreground font-medium transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={e => { e.preventDefault(); setMobileMenuOpen(false); }}
             >
               About
-            </Link>
+            </a>
             <a 
-              href="#skills" 
+              href="#" 
               className="text-foreground/80 hover:text-foreground font-medium transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={e => { e.preventDefault(); setMobileMenuOpen(false); }}
             >
               Skills
             </a>

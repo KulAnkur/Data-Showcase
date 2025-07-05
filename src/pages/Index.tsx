@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -33,7 +32,9 @@ const Index = () => {
       <Toaster position="top-right" />
       <Navbar />
       <Hero />
-      <ProjectsGrid />
+      <div id="projects">
+        <ProjectsGrid />
+      </div>
       <AboutSection />
       <Footer />
       

@@ -14,7 +14,11 @@ export const projectCategories = [
   "Business Analytics",
   "Data Science",
   "Data Storytelling",
-  "Environmental Data"
+  "Environmental Data",
+  "Market Analysis",
+  "Sustainability",
+  "AI",
+  "Entrepreneurship"
 ];
 
 export const projects: Project[] = [
@@ -30,12 +34,22 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "COVID-19 Global Impact Dashboard",
-    description: "Interactive visualization of COVID-19 data showing spread patterns, vaccination rates, and economic impacts across countries.",
-    thumbnail: "https://images.unsplash.com/photo-1584483766114-2cea6facdf57?w=600&auto=format&fit=crop",
-    category: ["Data Storytelling", "Social Analysis"],
-    tools: ["D3.js", "Tableau", "Python"],
-    date: "October 2022",
-    url: "#project/covid-dashboard"
+    title: "Effect of Electric Cars on the Market",
+    description: "An analysis of how the rise of electric vehicles is transforming the automotive market, impacting sales, infrastructure, and consumer behavior.",
+    thumbnail: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=600&auto=format&fit=crop",
+    category: ["Market Analysis", "Sustainability"],
+    tools: ["Python", "Tableau", "Excel"],
+    date: "April 2024",
+    url: "#project/electric-cars-market"
+  },
+  {
+    id: 3,
+    title: "Growth of Startups After the Launch of AI Tools like ChatGPT",
+    description: "A data-driven look at the surge in startup formation and funding following the release of advanced AI tools such as ChatGPT, and their impact on innovation.",
+    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&auto=format&fit=crop",
+    category: ["AI", "Entrepreneurship"],
+    tools: ["Python", "Power BI", "Google Trends"],
+    date: "June 2024",
+    url: "#project/ai-startup-growth"
   }
 ];

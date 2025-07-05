@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { projects } from '@/data/projects';
@@ -54,9 +53,49 @@ const ProjectDetail = () => {
     return null;
   }
   
-  // Sample data for charts based on project category
+  // Sample data for charts based on project category or title
   const getChartData = () => {
-    if (project.category.includes('Environmental Data')) {
+    if (project.title === 'Effect of Electric Cars on the Market') {
+      return {
+        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+        datasets: [
+          {
+            label: 'Electric Car Sales (Millions)',
+            data: [1.2, 1.8, 2.5, 4.2, 6.1, 8.5, 11.0],
+            borderColor: 'rgba(54, 162, 235, 1)',
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            tension: 0.4,
+          },
+          {
+            label: 'Market Share (%)',
+            data: [2, 3, 5, 8, 12, 18, 25],
+            borderColor: 'rgba(255, 206, 86, 1)',
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            tension: 0.4,
+          },
+        ],
+      };
+    } else if (project.title === 'Growth of Startups After the Launch of AI Tools like ChatGPT') {
+      return {
+        labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
+        datasets: [
+          {
+            label: 'New AI Startups (Thousands)',
+            data: [1.5, 1.7, 2.0, 3.2, 5.0, 7.5],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            tension: 0.4,
+          },
+          {
+            label: 'VC Funding (Billion $)',
+            data: [2.2, 2.5, 3.0, 5.5, 9.0, 13.0],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            tension: 0.4,
+          },
+        ],
+      };
+    } else if (project.category.includes('Environmental Data')) {
       return {
         labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
         datasets: [
@@ -176,7 +215,17 @@ const ProjectDetail = () => {
             <p className="text-foreground/80 mb-6 leading-relaxed">
               {project.description}
               {/* Extended description */}
-              {project.category.includes('Environmental Data') ? (
+              {project.title === 'Effect of Electric Cars on the Market' ? (
+                <>
+                  <br /><br />
+                  This project explores the rapid growth of electric vehicle (EV) sales and their impact on the global automotive market. The analysis covers trends in EV adoption, market share, and the influence on traditional car sales and infrastructure development. Key findings show a sharp increase in EV sales since 2020, with market share projected to reach 25% by 2024. The data also highlights the expansion of charging infrastructure and the shift in consumer preferences toward sustainable transportation.
+                </>
+              ) : project.title === 'Growth of Startups After the Launch of AI Tools like ChatGPT' ? (
+                <>
+                  <br /><br />
+                  This analysis investigates the surge in startup formation and venture capital funding following the release of advanced AI tools like ChatGPT. The data reveals a significant uptick in new AI-focused startups and a dramatic increase in VC investment in the AI sector from 2022 onward. The findings suggest that generative AI tools have lowered barriers to entry, accelerated innovation, and attracted substantial funding, fueling a new wave of entrepreneurship in the tech industry.
+                </>
+              ) : project.category.includes('Environmental Data') ? (
                 <>
                   <br /><br />
                   This analysis examines long-term climate trends across multiple geographic regions, processing data from over 3,000 climate monitoring stations. The visualization reveals clear patterns of temperature rise, with particular acceleration evident in the Arctic region and other climate-sensitive areas.

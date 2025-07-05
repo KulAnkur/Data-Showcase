@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from 'lucide-react';
@@ -30,10 +29,10 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-fade-in-delay-2">
             <Button asChild size="lg" className="px-8">
-              <a href="#projects">View Projects</a>
+              <a href="#" onClick={e => e.preventDefault()}>View Projects</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="px-8">
-              <a href="#about">About Me</a>
+              <a href="#" onClick={e => e.preventDefault()}>About Me</a>
             </Button>
           </div>
         </div>
@@ -41,7 +40,7 @@ const Hero = () => {
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-0 animate-fade-in-delay-3">
-        <a href="#projects" aria-label="Scroll down">
+        <a href="#" aria-label="Scroll down" onClick={e => e.preventDefault()}>
           <ChevronDown className="h-10 w-10 text-primary/70" />
         </a>
       </div>

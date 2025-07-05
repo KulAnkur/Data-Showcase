@@ -117,7 +117,7 @@ const LARentalProject: React.FC<LARentalProjectProps> = ({ project }) => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-2">New Rental Listings After the Fires</h3>
               <img
-                src="/LA-Fire-images/new_rental_listings.png"
+                src="/Data-Showcase/LA-Fire-images/new_rental_listings.png"
                 alt="New Rental Listings After the Fires"
                 className="w-full rounded-lg border shadow mb-2"
                 style={{ maxWidth: 600 }}
@@ -127,7 +127,7 @@ const LARentalProject: React.FC<LARentalProjectProps> = ({ project }) => {
               </p>
               <h3 className="text-xl font-semibold mb-2">Property Type Distribution Post-Fire</h3>
               <img
-                src="/LA-Fire-images/property_type.png"
+                src="/Data-Showcase/LA-Fire-images/property_type.png"
                 alt="Property Type Distribution Post-Fire"
                 className="w-full rounded-lg border shadow mb-2"
                 style={{ maxWidth: 600 }}
